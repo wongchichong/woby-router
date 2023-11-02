@@ -1,14 +1,16 @@
 {
-  "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "dist",
-    "target": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "voby",
-    "module": "esnext",
-    "baseUrl": "src"
-  },
-  "include": ["./src"]
+    "compilerOptions": {
+        "declaration": true,
+        "declarationDir": "dist",
+        "target": "esnext",
+        "moduleResolution": "node",
+        "strict": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "woby",
+        "module": "esnext",
+        "baseUrl": "src"
+    },
+    "include": [
+        "./src"
+    ]
 }

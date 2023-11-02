@@ -2084,7 +2084,7 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /voby/0.43.2:
+  /woby/0.43.2:
     resolution: {integrity: sha512-NOiGBHezHGO0RO/I78nPuZWWPxSGLOdQNUgNWfn4YDFOrfZDilmvstQ3fzNis8r4e4QYW9nMcYMixw1zCX/lJA==}
     dependencies:
       htm: 3.1.1

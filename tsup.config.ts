@@ -5,5 +5,5 @@ export default defineConfig({
   dts: true,
   entry: ['src/index.tsx'],
   format: ['esm'],
-  name: 'voby-router',
+  name: 'woby-router',
 });

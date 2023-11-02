@@ -1,6 +1,6 @@
 # Voby Router
 
-The router for [Voby](https://github.com/vobyjs/voby).
+The router for [Voby](https://github.com/vobyjs/woby).
 ---
 
 This is a port of [Solid-App-Router](https://github.com/solidjs/solid-app-router) to voby.
@@ -39,8 +39,8 @@ Use it freely with suspense, resources, and lazy components. Voby router also al
 Install `voby-router`, then wrap your root component with the Router component:
 
 ```jsx
-import { render } from "voby";
-import { Router } from "voby-router";
+import { render } from "woby";
+import { Router } from "woby-router";
 import App from "./App";
 
 render(
@@ -63,7 +63,7 @@ This sets up a context so that we can display the routes anywhere in the app.
 
 
 ```jsx
-import { Routes, Route } from "voby-router"
+import { Routes, Route } from "woby-router"
 
 export default function App() {
   return (
@@ -80,7 +80,7 @@ export default function App() {
 2. Add each route using the `Route` component, specifying a path and an element to render when the user navigates to that path.
 
 ```jsx
-import { Routes, Route } from "voby-router"
+import { Routes, Route } from "woby-router"
 
 import Home from "./pages/Home"
 import Users from "./pages/Users"
@@ -104,8 +104,8 @@ export default function App() {
 This way, the `Users` and `Home` components will only be loaded if you're navigating to `/users` or `/`, respectively.
 
 ```jsx
-import { lazy } from "voby";
-import { Routes, Route } from "voby-router"
+import { lazy } from "woby";
+import { Routes, Route } from "woby-router"
 const Users = lazy(() => import("./pages/Home"));
 const Home = lazy(() => import("./pages/Users"));
 
@@ -128,8 +128,8 @@ export default function App() {
 Use the `A` component to create an anchor tag that takes you to a route:
 
 ```jsx
-import { lazy } from "voby";
-import { Routes, Route, A } from "voby-router"
+import { lazy } from "woby";
+import { Routes, Route, A } from "woby-router"
 const Users = lazy(() => import("./pages/Home"));
 const Home = lazy(() => import("./pages/Users"));
 
@@ -183,8 +183,8 @@ function getPath ({navigate, location}) {
 If you don't know the path ahead of time, you might want to treat part of the path as a flexible parameter that is passed on to the component. 
 
 ```jsx
-import { lazy } from "voby";
-import { Routes, Route } from "voby-router"
+import { lazy } from "woby";
+import { Routes, Route } from "woby-router"
 const Users = lazy(() => import("./pages/Home"));
 const Home = lazy(() => import("./pages/Users"));
 const Home = lazy(() => import("./pages/User"));
@@ -246,8 +246,8 @@ To do this, create a function that fetches and returns the data using `createRes
 
 
 ```js
-import { lazy } from "voby";
-import { Route } from "voby-router";
+import { lazy } from "woby";
+import { Route } from "woby-router";
 import { fetchUser } ... 
 
 const User = lazy(() => import("/pages/users/[id].js"));
@@ -266,7 +266,7 @@ When the route is loaded, the data function is called, and the result can be acc
 
 ```jsx
 //pages/users/[id].js
-import { useRouteData } from 'voby-router';
+import { useRouteData } from 'woby-router';
 export default function User() {
   const user = useRouteData();
   return <h1>{user().name}</h1>;
@@ -285,8 +285,8 @@ As its only argument, the data function is passed an object that you can use to 
 A common pattern is to export the data function that corresponds to a route in a dedicated `route.data.js` file. This way, the data function can be imported without loading anything else.
 
 ```js
-import { lazy } from "voby";
-import { Route } from "voby-router";
+import { lazy } from "woby";
+import { Route } from "woby-router";
 import { fetchUser } ... 
 import UserData from "./pages/users/[id].data.js";
 const User = lazy(() => import("/pages/users/[id].js"));
@@ -330,7 +330,7 @@ Only leaf Route nodes (innermost `Route` components) are given a route. If you w
 You can also take advantage of nesting by adding a parent element with an `<Outlet/>`.
 ```jsx
 
-import { Outlet } from "voby-router";
+import { Outlet } from "woby-router";
 
 function PageWrapper () {
   return <div>
@@ -364,8 +364,8 @@ If you declare a `data` function on a parent and a child, the result of the pare
 You don't have to use JSX to set up your routes; you can pass an object directly with `useRoutes`:
 
 ```jsx
-import { lazy, render } from "voby";
-import { Router, useRoutes, A } from "voby-router";
+import { lazy, render } from "woby";
+import { Router, useRoutes, A } from "woby-router";
 
 const routes = [
   {
