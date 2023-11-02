@@ -1,15 +1,15 @@
-# Voby Router
+# Woby Router
 
-The router for [Voby](https://github.com/vobyjs/woby).
+The router for [Woby](https://github.com/vobyjs/woby).
 ---
 
-This is a port of [Solid-App-Router](https://github.com/solidjs/solid-app-router) to voby.
+This is a port of [Solid-App-Router](https://github.com/solidjs/solid-app-router) to woby.
 
-A router lets you change your view based on the URL in the browser. This allows your "single-page" application to simulate a traditional multipage site. To use voby router, you specify components called Routes that depend on the value of the URL (the "path"), and the router handles the mechanism of swapping them in and out.
+A router lets you change your view based on the URL in the browser. This allows your "single-page" application to simulate a traditional multipage site. To use woby router, you specify components called Routes that depend on the value of the URL (the "path"), and the router handles the mechanism of swapping them in and out.
 
-Voby router is a universal router for voby - it works whether you're rendering on the client or on the server. It was inspired by and combines paradigms of React Router and the Ember Router. Routes can be defined directly in your app's template using JSX, but you can also pass your route configuration directly as an object. It also supports nested routing, so navigation can change a part of a component, rather than completely replacing it. 
+Woby router is a universal router for woby - it works whether you're rendering on the client or on the server. It was inspired by and combines paradigms of React Router and the Ember Router. Routes can be defined directly in your app's template using JSX, but you can also pass your route configuration directly as an object. It also supports nested routing, so navigation can change a part of a component, rather than completely replacing it. 
 
-Use it freely with suspense, resources, and lazy components. Voby router also allows you to define a data function that loads parallel to the routes ([render-as-you-fetch](https://epicreact.dev/render-as-you-fetch/)).
+Use it freely with suspense, resources, and lazy components. Woby router also allows you to define a data function that loads parallel to the routes ([render-as-you-fetch](https://epicreact.dev/render-as-you-fetch/)).
 
 - [Getting Started](#getting-started)
   - [Set Up the Router](#set-up-the-router)
@@ -33,10 +33,10 @@ Use it freely with suspense, resources, and lazy components. Voby router also al
 ### Set Up the Router
 
 ```sh
-> npm i voby-router
+> npm i woby-router
 ```
 
-Install `voby-router`, then wrap your root component with the Router component:
+Install `woby-router`, then wrap your root component with the Router component:
 
 ```jsx
 import { render } from "woby";
@@ -57,7 +57,7 @@ This sets up a context so that we can display the routes anywhere in the app.
 
 ### Configure Your Routes
 
-`voby-router` allows you to configure your routes using JSX:
+`woby-router` allows you to configure your routes using JSX:
 
 1. Use the `Routes` component to specify where the routes should appear in your app.
 
@@ -92,7 +92,7 @@ export default function App() {
       <Routes>
         <Route path="/users" element={<Users/>} />
         <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<div>This site was made with Voby</div>} />
+        <Route path="/about" element={<div>This site was made with Woby</div>} />
       </Routes>
     <>
   )
@@ -116,7 +116,7 @@ export default function App() {
       <Routes>
         <Route path="/users" element={<Users/>} />
         <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<div>This site was made with Voby</div>} />
+        <Route path="/about" element={<div>This site was made with Woby</div>} />
       </Routes>
     <>
   )
@@ -144,7 +144,7 @@ export default function App() {
       <Routes>
         <Route path="/users" element={<Users/>} />
         <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<div>This site was made with Voby</div>} />
+        <Route path="/about" element={<div>This site was made with Woby</div>} />
       </Routes>
     <>
   )
@@ -165,7 +165,7 @@ The `<A>` tag also has an `active` class if its href matches the current locatio
 
 
 ### The Navigate Component
-`voby-router` provides a `Navigate` component that works similarly to `A`, but it will _immediately_ navigate to the provided path as soon as the component is rendered. It also uses the `href` prop, but you have the additional option of passing a function to `href` that returns a path to navigate to:
+`woby-router` provides a `Navigate` component that works similarly to `A`, but it will _immediately_ navigate to the provided path as soon as the component is rendered. It also uses the `href` prop, but you have the additional option of passing a function to `href` that returns a path to navigate to:
 
 ```jsx
 function getPath ({navigate, location}) {
@@ -197,7 +197,7 @@ export default function App() {
         <Route path="/users" element={<Users/>} />
         <Route path="/users/:id" element={<User/>} />
         <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<div>This site was made with Voby</div>} />
+        <Route path="/about" element={<div>This site was made with Woby</div>} />
       </Routes>
     <>
   )
@@ -418,7 +418,7 @@ render(
 ```
 ## Router Primitives
 
-Voby Router provides a number of primitives that read off the Router and Route context.
+Woby Router provides a number of primitives that read off the Router and Route context.
 
 ### useParams
 
