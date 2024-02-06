@@ -3,7 +3,7 @@
     "description": "Universal router for voby",
     "author": "high1",
     "license": "MIT",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "homepage": "https://github.com/vobyjs/woby-router#readme",
     "repository": {
         "type": "git",
@@ -51,7 +51,7 @@
         "vite": "^4.5.2"
     },
     "peerDependencies": {
-        "woby": "workspace:../woby"
+        "woby": "workspace:^"
     },
     "packageManager": "pnpm@7.14.0"
 }
